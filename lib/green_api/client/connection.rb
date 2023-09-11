@@ -37,6 +37,12 @@ module GreenApi
 
         data
       end
+
+      # TODO: refactor this
+      def tab_controls(options)
+        options = options.map { |k, v| "\r\n\t\"#{k}\": \"#{v}\"" }.join(',')
+        "{#{options}}"
+      end
     end
   end
 end

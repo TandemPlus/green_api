@@ -8,8 +8,8 @@ module GreenApi
         get("#{@instance}/receiveNotification/#{@token}")
       end
 
-      def delete_notification
-        delete("#{@instance}/deleteNotification/#{@token}")
+      def delete_notification(id: nil)
+        delete("#{@instance}/deleteNotification/#{@token}/#{id}")
       end
     end
   end

@@ -27,14 +27,6 @@ module GreenApi
       def send_link(options)
         post("#{@instance}/sendLink/#{@token}", tab_controls(options))
       end
-
-      private
-
-      # TODO: refactor this
-      def tab_controls(options)
-        options = options.map { |k, v| "\r\n\t\"#{k}\": \"#{v}\"" }.join(',')
-        "{#{options}}"
-      end
     end
   end
 end
