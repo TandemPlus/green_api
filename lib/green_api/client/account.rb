@@ -30,6 +30,10 @@ module GreenApi
       def set_profile_picture(options = {})
         post("#{@instance}/setProfilePicture/#{@token}", options)
       end
+
+      def get_wa_settings(options = {})
+        get("#{@instance}/getWaSettings/#{@token}", options)
+      end
     end
   end
 end
