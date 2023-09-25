@@ -28,8 +28,8 @@ module GreenApi
     format :json
 
     def initialize(token: nil, instance: nil)
-      @token = token || ENV['GREEN_API_INSTANCE']
-      @instance = instance || ENV['GREEN_API_TOKEN']
+      @token = token || ENV['GREEN_API_TOKEN']
+      @instance = instance || ENV['GREEN_API_INSTANCE']
     end
   end
 end
