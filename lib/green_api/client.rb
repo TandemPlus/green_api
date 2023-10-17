@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'green_api/client/connection'
+require 'green_api/connection'
 require 'green_api/client/account'
 require 'green_api/client/send'
 require 'green_api/client/receive'
@@ -14,7 +14,7 @@ require 'green_api/client/read'
 module GreenApi
   class Client
     include HTTParty
-    include GreenApi::Client::Connection
+    include GreenApi::Connection
     include GreenApi::Client::Account
     include GreenApi::Client::Send
     include GreenApi::Client::Receive

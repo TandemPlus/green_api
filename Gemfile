@@ -10,3 +10,7 @@ gem 'rake', '~> 13.0'
 gem 'rspec', '~> 3.0'
 gem 'rubocop', group: 'development', require: false
 gem 'standard', '~> 1.3'
+
+group :test do
+  gem 'webmock'
+end
