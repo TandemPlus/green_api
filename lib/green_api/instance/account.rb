@@ -17,8 +17,8 @@ module GreenApi
 
       def default_options(options = {})
         {
-          "webhookUrl": nil,
-          "webhookUrlToken": nil,
+          "webhookUrl": '',
+          "webhookUrlToken": '',
           "delaySendMessagesMilliseconds": 1000,
           "markIncomingMessagesReaded": 'yes',
           "markIncomingMessagesReadedOnReply": 'yes',
