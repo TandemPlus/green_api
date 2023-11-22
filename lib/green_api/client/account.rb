@@ -8,7 +8,7 @@ module GreenApi
       end
 
       def set_settings(options = {})
-        post("#{@instance}/setSettings/#{@token}", options)
+        post("#{@instance}/setSettings/#{@token}", default_options(options))
       end
 
       def get_state_instance(options = {})

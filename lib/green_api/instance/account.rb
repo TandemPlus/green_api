@@ -14,25 +14,6 @@ module GreenApi
       def get_instances(options = {})
         get("/getInstances/#{@token}", options)
       end
-
-      def default_options(options = {})
-        {
-          "webhookUrl": '',
-          "webhookUrlToken": '',
-          "delaySendMessagesMilliseconds": 1000,
-          "markIncomingMessagesReaded": 'yes',
-          "markIncomingMessagesReadedOnReply": 'yes',
-          "outgoingAPIMessageWebhook": 'yes',
-          "outgoingWebhook": 'yes',
-          "outgoingMessageWebhook": 'yes',
-          "incomingWebhook": 'yes',
-          "deviceWebhook": 'no',
-          "stateWebhook": 'no',
-          "keepOnlineStatus": 'no',
-          "pollMessageWebhook": 'no',
-          "incomingBlockWebhook": 'yes'
-        }.merge(options)
-      end
     end
   end
 end
