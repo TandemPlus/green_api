@@ -15,23 +15,5 @@ module GreenApi
     def initialize(token: nil)
       @token = token || ENV['GREEN_PARTNER_TOKEN']
     end
-
-    private
-
-    # TODO: refactor this
-    # У партнерского API должен быть параметр data
-    def request(method, path, options, files = nil)
-      headers = { 'Content-Type': 'application/json' }
-      response = self.class.send(method,
-                                 path,
-                                 {
-                                   headers: headers,
-                                   data: options
-                                 })
-      data = response.parsed_response
-      return unless data
-
-      data
-    end
   end
 end
