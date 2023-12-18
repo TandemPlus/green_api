@@ -14,7 +14,7 @@ module GreenApi
       end
 
       def get_contact_info(options)
-        get("#{@instance}/getContactInfo/#{@token}", options)
+        get("#{@instance}/getContactInfo/#{@token}", tab_controls(options))
       end
 
       def delete_message(options)
