@@ -12,7 +12,7 @@ module GreenApi
       end
 
       def get_group_data(options)
-        get("#{@instance}/getGroupData/#{@token}", tab_controls(options))
+        post("#{@instance}/getGroupData/#{@token}", tab_controls(options))
       end
 
       def add_group_participant(options)
